@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My App</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+    <link rel="stylesheet" href="app.min.css">
+    <style>
+      /* TODO */
+    </style>
+  </head>
+
+  <body>
+      
+
+    <script src="zepto.js"></script>
+    <script src="app.min.js"></script>
+      <script>
+      if(typeof(Storage)!=="undefined"){
+          var names=[];
+          names[0]=prompt("enter your name");
+          names[1]=prompt("enter your name");
+          localStorage.setItem("names",JSON.stringify(names));
+          var storage=JSON.parse(localStorage.getItem("names"));
+          alert(storage);
+      }
+          else{
+           alert("pleadse upgrade your browser");
+          }
+      
+      
+      </script>
+
+  </body>
+</html>
